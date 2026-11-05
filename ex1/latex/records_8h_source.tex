@@ -1,0 +1,39 @@
+\doxysection{records.\+h}
+\hypertarget{records_8h_source}{}\label{records_8h_source}\index{include/records.h@{include/records.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RECORDS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RECORDS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00012\ \ \ \ \ uint64\_t\ id;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ field1;}
+\DoxyCodeLine{00014\ \ \ \ \ int64\_t\ field2;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ field3[16];}
+\DoxyCodeLine{00016\ \}\ \mbox{\hyperlink{struct_record}{Record}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ read\_record(FILE\ *file,\ \mbox{\hyperlink{struct_record}{Record}}\ *record);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ write\_record(FILE\ *file,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_record}{Record}}\ *record);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ load\_records\_from\_file(FILE\ *file,\ \mbox{\hyperlink{struct_record}{Record}}\ **records,\ \textcolor{keywordtype}{size\_t}\ *count);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{int}\ save\_records\_to\_file(FILE\ *file,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_record}{Record}}\ *records,\ \textcolor{keywordtype}{size\_t}\ count);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ print\_record(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_record}{Record}}\ *record);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ cmp\_id(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *b);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{int}\ cmp\_field1(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *b);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{int}\ cmp\_field2(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *b);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{int}\ cmp\_field3(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *b);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

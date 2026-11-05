@@ -1,0 +1,8 @@
+*.pdf
+*.zip
+*.exe
+*.o
+*.class
+*.jar
+.vscode/
+.DS_Store
